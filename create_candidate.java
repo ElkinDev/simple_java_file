@@ -129,15 +129,20 @@
       g.drawString(strBuffer.toString(), 100, 200);
    }
    
-   
+  @Override 
     public void actionPerformed(ActionEvent e){  
-        addItem("Clicked".concat(e.toString()));
         if (e.getActionCommand().equals("Submit")) {
             
-          Person newone= new Person("asdasd","asdasd","asdasdsa","asdasdas","asdasd",122);
-
+           Person newone= new Person(name.getText(),address.getText(),birthday.getText(),gender.getName(),role.getText(),Integer.parseInt(salary.getText()));
+           System.out.print("new Job Created:"+newone.name+" "+newone.getSalary()+" ");
+           this.addItem("new Job Created:"+newone.name+" "+newone.getSalary()+" ");
         } else if (e.getActionCommand().equals("Clear")) {
             System.out.print("clear all values");
+            name.setText(" ");
+            address.setText(" ");
+            birthday.setText(" ");
+            role.setText(" ");
+            salary.setText(" ");
         }
     }  
    

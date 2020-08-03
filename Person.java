@@ -30,8 +30,11 @@ public class Person extends createjob {
         this.role=role;
         this.salary=salary;
         this.job=new createjob();
+        job.setId();
         job.setSalary(salary);
-        System.out.println(this.job);
+        job.setRole(role);
+        job.setSalary(salary);
+        System.out.println(job.getId());
         
     }
     public long getSalary() {
